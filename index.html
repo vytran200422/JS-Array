@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container-lg">
+        <div class="content my-5 mx-5">
+            <!-- input value  -->
+            <div class="content-item">
+                <div>
+                  <h4>Nhập số n</h4>
+                    <input id="nhapSo" placeholder="Nhập số n" style="width: 40%;" type="text" class="p-1">
+                    <button id="btnTS" class="btn py-2 px-5 btn-primary rounded-pill ms-2">Thêm số</button>
+                </div>
+                <p id="themSo" class="p-2 text-success"></p>
+            </div>
+
+            <!-- tính tổng  -->
+            <div class="content-item my-4">
+              <h4>Tính tổng</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="tong" class=" text-success bg-light m-0"></p>
+                </div>
+                <button id="btnTT" class="btn py-2 px-5 btn-primary rounded-pill ms-2">Tính tổng</button> 
+              </div>
+            </div>
+
+            <!-- đếm phần tử -->
+            <div class="content-item my-4">
+              <h4>Đếm phần tử</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="demSo" class=" text-success bg-light m-0"></p>
+                </div>
+                <button id="btnDS" class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="length(emArr)" >Đếm số</button>
+              </div>
+            </div>
+
+            <!-- tìm số nhỏ nhất -->
+            <div class="content-item my-4">
+              <h4>Tìm số nhỏ nhất</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="minNumb" class=" text-success bg-light m-0"></p>
+                </div>
+                <button id="btnMin" class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="min(emArr)">Số nhỏ nhất</button>
+              </div>
+            </div>
+
+            <!-- tìm số dương nhỏ nhất -->
+            <div class="content-item my-4">
+              <h4>Tìm số dương nhỏ nhất</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="posMin" class=" text-success bg-light m-0"></p>
+                </div>
+                <button  class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="posMin()">Số nhỏ nhất</button>
+              </div>
+            </div>
+
+            <!-- tìm số chẵn cuối cùng -->
+            <div class="content-item my-4">
+              <h4>Tìm số chẵn cuối cùng</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="lastEven" class=" text-success bg-light m-0"></p>
+                </div>
+                <button class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="lastEven()">Số chẵn cuối cùng</button>
+              </div>
+            </div>
+
+            <!-- đổi chỗ -->
+            <div class="content-item my-4">
+              <h4>Đổi chỗ</h4>
+              <div>
+                <div class="d-flex mb-3">
+                  <input id="spot1" type="text" placeholder="Nhập số vị trí 1" class="me-5">
+                  <input id="spot2" type="text" placeholder="Nhập số vị trí 1" >
+                </div>
+                <div class="d-flex align-items-center">
+                  <div class="bg-light p-3" style="width: 40%">
+                    <p id="swap" class=" text-success bg-light m-0"></p>
+                  </div>
+                  <button class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="swap()">Đổi chỗ</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sắp xếp theo thứ tự tăng dần -->
+            <div class="content-item my-4">
+              <h4>Sắp xếp theo thứ tự tăng dần</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="order" class=" text-success bg-light m-0"></p>
+                </div>
+                <button class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="sort()">Sắp xếp</button>
+              </div>
+            </div>
+
+            <!-- Tìm số nguyên tố đầu tiên -->
+            <div class="content-item my-4">
+              <h4>Tìm số nguyên tố đầu tiên</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="prime" class=" text-success bg-light m-0"></p>
+                </div>
+                <button class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="prime()">Tìm số nguyên tố</button>
+              </div>
+            </div>
+
+            <!-- Đếm số nguyên -->
+            <div class="content-item my-4">
+              <h4>Đếm số nguyên</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="integer" class=" text-success bg-light m-0"></p>
+                </div>
+                <button class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="integer()">Tìm số nguyên</button>
+              </div>
+            </div>
+
+            <!--so sánh số lượng số âm và số dương -->
+            <div class="content-item my-4">
+              <h4>So sánh số lượng số âm và số dương</h4>
+              <div class="d-flex justify-content-lg-start align-items-center">
+                <div class="bg-light p-3" style="width: 40%">
+                  <p id="compare" class=" text-success bg-light m-0"></p>
+                </div>
+                <button class="btn py-2 px-5 btn-primary rounded-pill ms-2" onclick="compare()"> So sánh</button>
+              </div>
+            </div>
+
+        </div>
+    </div>
+
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
